@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Student</title>
+    <style>
+      .firstbox{
+         background-color: aquamarine;
+         border: 2px rgb(0, 255, 136) solid;
+      }
+      label{
+         display: block;
+         padding: 2px;
+         text-align: center;
+      }
+      input{
+         margin-left: 11.5em;
+         text-align: center;
+      }
+      button{
+         margin-left: 16em;
+         margin-top: 1em;
+      }
+    </style>
+</head>
+<body>
+   <h2>Enter the Student Details</h2>
+    <form action="#" th:action="@{/save}" th:object="${student}" method="post">
+      <div class="fullbox">
+         <div class="firstbox">
+
+     <div alight="left">
+        <label class="form_label">Student Name</label>
+        <input type="text" th:field="*{name}" class="form_label" >
+     </div>
+     <div alight="left">
+        <label class="form_label">Course</label>
+        <input type="text" th:field="*{course}" class="form_label" >
+     </div> 
+     <div alight="left">
+        <label class="form_label">Fees</label>
+        <input type="text" th:field="*{fees}" class="form_label" >
+     </div>
+     <div alight="left">
+        <button type="submit">Save</button>
+     </div> 
+   </div>
+   </div>     
+    </form>
+</body>
+</html>
