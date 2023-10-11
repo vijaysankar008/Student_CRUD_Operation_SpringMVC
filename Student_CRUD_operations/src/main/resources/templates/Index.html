@@ -1,6 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html xmlns="http://www.thymeleaf.org">
 
+    <html lang="en">
+	<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,9 +26,9 @@
 </head>
 
     </body>
-        <h2><i class="fa-sharp fa-light fa-house"></i>AIHT College Website</h2>
+        <h2><i class="fas fa-light fa-home"></i>AIHT College Website</h2>
    <div align = "left" >   
-     <h3>To Add the New Student Details <a  th:href="@{'/new'}">click here</a>...</h3>    
+     <h3>To Add the New Student Details <a  th:href="@{'/studentDatabase/new'}">click here</a>...</h3>    
     </div>
    <div class="details"> <h3>Student Details Table</h3></div>
    
@@ -44,13 +46,12 @@
             <td th:text="${student.name}">Name</td>
             <td th:text="${student.course}">Course</td>
             <td th:text="${student.fees}">Fee</td>
-            <td><a th:href="@{'/edit/' + ${student.id}}">Edit</a></td>
-            <td> <a th:href="@{'/delete/' + ${student.id}}">Delete</a></td>
-            
+            <td><a th:href="@{'/studentDatabase/edit/' + ${student.id}}">Edit</a></td>
+            <td> <a th:href="@{'/studentDatabase/delete/' + ${student.id}}">Delete</a></td>
          </tr>       
-	   
    </table>
 
     
 </body>
 </html>
+
